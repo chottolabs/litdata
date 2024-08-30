@@ -86,11 +86,10 @@ This step will format the dataset for fast loading. The data will be written in 
 
 ```python
 import numpy as np
-from PIL import Image
 import litdata as ld
 
 def random_images(index):
-    fake_images = Image.fromarray(np.random.randint(0, 256, (32, 32, 3), dtype=np.uint8))
+    fake_images = np.random.randint(0, 256, (32, 32, 3), dtype=np.uint8)
     fake_labels = np.random.randint(10)
 
     # You can use any key:value pairs. Note that their types must not change between samples, and Python lists must
